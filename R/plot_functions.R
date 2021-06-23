@@ -46,10 +46,15 @@ ecorys_palettes <- list(
 #' @return None
 #'
 #' @examples
+#' \dontrun{
 #' tibble(x = seq(1,10,1), y = seq(1,10,1)) %>%
-#' ggplot(aes(x = x, y = y)) +
+#' ggplot2::ggplot(aes(x = x, y = y)) +
 #' geom_line() +
+#' ggtitle("Plot in Ecorys theme") +
+#' xlab("X axis") +
+#' ylab("Y axis") +
 #' theme_ecorys()
+#' }
 #'
 #' @export
 theme_ecorys <- function(){
@@ -63,7 +68,7 @@ theme_ecorys <- function(){
                  axis.ticks = ggplot2::element_blank(), #optional tick marks
                  #axis.line = element_line(colour = ecorys_dark_grey), #optional axis lines
                  panel.grid.major.y = ggplot2::element_line(colour = ecorys_colours$grey), #optional gridlines
-                 panel.grid.major.x = element_blank(),
+                 panel.grid.major.x = ggplot2::element_blank(),
                  panel.background = ggplot2::element_blank(),
                  plot.title.position = "plot",
                  #strip.background = ggplot2::element_rect(fill = "white"),  # alternative background for facets

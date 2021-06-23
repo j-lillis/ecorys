@@ -13,9 +13,14 @@ None
 Use \code{\link{theme_ecorys}} to format ggplot2 plots in the Ecorys style.
 }
 \examples{
+\dontrun{
 tibble(x = seq(1,10,1), y = seq(1,10,1)) \%>\%
-ggplot(aes(x = x, y = y)) +
+ggplot2::ggplot(aes(x = x, y = y)) +
 geom_line() +
+ggtitle("Plot in Ecorys theme") +
+xlab("X axis") +
+ylab("Y axis") +
 theme_ecorys()
+}
 
 }
