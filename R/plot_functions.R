@@ -69,8 +69,8 @@ theme_ecorys <- function(x_grid = FALSE, y_grid = FALSE) {
                  axis.title = ggplot2::element_text(family = font, size = 12, color = "#222222"),
                  axis.text = ggplot2::element_text(family = font, size = 10, color = "#4c4c4c"),
                  axis.ticks = ggplot2::element_blank(), #optional tick marks
-                 panel.grid.major.x = ggplot2::element_line(colour = if_else(x_grid == T, ecorys_colours$grey, "white")),
-                 panel.grid.major.y = ggplot2::element_line(colour = if_else(y_grid == T, ecorys_colours$grey, "white")),
+                 panel.grid.major.x = ggplot2::element_line(colour = ifelse(x_grid == T, ecorys_colours$grey, "white")),
+                 panel.grid.major.y = ggplot2::element_line(colour = ifelse(y_grid == T, ecorys_colours$grey, "white")),
                  #axis.line = element_line(colour = ecorys_dark_grey), #optional axis lines
                  panel.background = ggplot2::element_blank(),
                  plot.title.position = "plot",
