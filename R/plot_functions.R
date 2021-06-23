@@ -43,6 +43,9 @@ ecorys_palettes <- list(
 #'
 #' Use \code{\link{theme_ecorys}} to format ggplot2 plots in the Ecorys style.
 #'
+#' @param x_grid Includes major grid lines for x axis
+#' @param y_grid Includes major grid lines for y axis
+#'
 #' @return None
 #'
 #' @examples
@@ -57,7 +60,7 @@ ecorys_palettes <- list(
 #' }
 #'
 #' @export
-theme_ecorys <- function(){
+theme_ecorys <- function(x_grid = FALSE, y_grid = FALSE) {
   font <- "Open Sans"
   ggplot2::theme(plot.title = ggplot2::element_text(family = font, size = 18, color = "#222222"),
                  plot.subtitle = ggplot2::element_text(family = font, size = 14, color = "#4c4c4c"),
@@ -66,9 +69,9 @@ theme_ecorys <- function(){
                  axis.title = ggplot2::element_text(family = font, size = 12, color = "#222222"),
                  axis.text = ggplot2::element_text(family = font, size = 10, color = "#4c4c4c"),
                  axis.ticks = ggplot2::element_blank(), #optional tick marks
+                 panel.grid.major.x = ggplot2::element_line(colour = if_else(x_grid == T, ecorys_colours$grey, "white")),
+                 panel.grid.major.y = ggplot2::element_line(colour = if_else(y_grid == T, ecorys_colours$grey, "white")),
                  #axis.line = element_line(colour = ecorys_dark_grey), #optional axis lines
-                 panel.grid.major.y = ggplot2::element_line(colour = ecorys_colours$grey), #optional gridlines
-                 panel.grid.major.x = ggplot2::element_blank(),
                  panel.background = ggplot2::element_blank(),
                  plot.title.position = "plot",
                  #strip.background = ggplot2::element_rect(fill = "white"),  # alternative background for facets
