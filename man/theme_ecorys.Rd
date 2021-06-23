@@ -4,7 +4,12 @@
 \alias{theme_ecorys}
 \title{Theme to format ggplot2 charts in Ecorys style}
 \usage{
-theme_ecorys()
+theme_ecorys(x_grid = FALSE, y_grid = FALSE)
+}
+\arguments{
+\item{x_grid}{Includes major grid lines for x axis}
+
+\item{y_grid}{Includes major grid lines for y axis}
 }
 \value{
 None
