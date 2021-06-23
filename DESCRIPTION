@@ -1,11 +1,10 @@
 Package: ecorys
 Type: Package
-Title: Some Handy Tools for Using R at Ecorys
+Title: Ecorys
 Version: 0.1.0
 Author: Johnny Lillis
 Maintainer: johnny.lillis@ecorys.com
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Description: Some handy tools for using R at Ecorys
+License: CC BY 4.0
 Encoding: UTF-8
 LazyData: true
