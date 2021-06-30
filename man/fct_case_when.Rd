@@ -2,7 +2,7 @@
 % Please edit documentation in R/wrangle_functions.R
 \name{fct_case_when}
 \alias{fct_case_when}
-\title{An extension of \code{\link{dplyr::case_when}} which outputs right hand side values as ordered factors}
+\title{An extension of \code{\link{dplyr::case_when()}} which outputs right hand side values as ordered factors}
 \usage{
 fct_case_when(...)
 }
@@ -10,7 +10,7 @@ fct_case_when(...)
 None
 }
 \description{
-\code{\link{fct_case_when}} extends \code{\link{dplyr::case_when}}. It outputs right hand side values as factors, where the order of resulting factor levels reflects the order in which arguments to the function are specified.
+\code{\link{fct_case_when()}} extends \code{\link{dplyr::case_when()}}. It outputs right hand side values as factors, where the order of resulting factor levels reflects the order in which arguments to the function are specified.
 This function was developed by StackOverflow  user Dennis YL (see \href{https://stackoverflow.com/questions/49572416/r-convert-to-factor-with-order-of-levels-same-with-case-when}{here}).
 }
 \examples{
