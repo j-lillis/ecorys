@@ -5,12 +5,14 @@ Version: 0.1.0
 Authors@R: person("Johnny", "Lillis", email = "johnny.lillis@ecorys.com",
   role = c("aut", "cre"))
 Description: Some handy tools for using R at Ecorys.
-License: GPL-3
+License: GPL (>= 3)
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.1
+Depends: 
+    R (>= 4.0.0)
 Imports: 
-    dplyr,
-    ggplot2,
-    extrafont,
-    magrittr
+    dplyr (>= 1.0.0),
+    ggplot2 (>= 3.3.0),
+    extrafont (>= 0.17),
+    magrittr (>= 1.5)
