@@ -49,34 +49,35 @@ ecorys_palettes <- list(
 #' @return None
 #'
 #' @examples
-#' \dontrun{
-#' tibble(x = seq(1,10,1), y = seq(1,10,1)) %>%
-#' ggplot2::ggplot(aes(x = x, y = y)) +
+#' example_data <- tibble(x = seq(1,10,1), y = seq(1,10,1))
+#'
+#' ggplot(example_data = data, aes(x = x, y = y)) +
 #' geom_line() +
-#' ggtitle("Plot in Ecorys theme") +
-#' xlab("X axis") +
-#' ylab("Y axis") +
 #' theme_ecorys()
-#' }
+#'
 #'
 #' @export
-theme_ecorys <- function(x_grid = FALSE, y_grid = FALSE) {
+theme_ecorys <- function(grid.major.x = FALSE, grid.major.y = FALSE, axis.line = FALSE, strip.background = TRUE) {
   font <- "Open Sans"
-  ggplot2::theme(plot.title = ggplot2::element_text(family = font, size = 18, color = "#222222"),
+  font_bold <- "Open Sans Semibold"
+  ggplot2::theme(plot.title = ggplot2::element_text(family = font_bold, size = 18, color = "#222222"),
                  plot.subtitle = ggplot2::element_text(family = font, size = 14, color = "#4c4c4c"),
                  plot.caption = ggplot2::element_blank(),
                  legend.text = ggplot2::element_text(family = font, size = 10, color = "#4c4c4c"),
                  axis.title = ggplot2::element_text(family = font, size = 12, color = "#222222"),
+                 legend.title = ggplot2::element_text(family = font, size = 12, color = "#222222"),
                  axis.text = ggplot2::element_text(family = font, size = 10, color = "#4c4c4c"),
-                 axis.ticks = ggplot2::element_blank(), #optional tick marks
-                 panel.grid.major.x = ggplot2::element_line(colour = ifelse(x_grid == T, ecorys_colours$grey, alpha("white", 0))),
-                 panel.grid.major.y = ggplot2::element_line(colour = ifelse(y_grid == T, ecorys_colours$grey, alpha("white", 0))),
+                 axis.ticks = ggplot2::element_blank(),
+                 panel.grid.major.x = ggplot2::element_line(colour = ifelse(grid.major.x == T, ecorys_colours$grey, alpha("white", 0))),
+                 panel.grid.major.y = ggplot2::element_line(colour = ifelse(grid.major.y == T, ecorys_colours$grey, alpha("white", 0))),
                  panel.grid.minor.x = ggplot2::element_blank(),
                  panel.grid.minor.y = ggplot2::element_blank(),
-                 #axis.line = element_line(colour = ecorys_dark_grey), #optional axis lines
+                 axis.line = ggplot2::element_line(colour = ifelse(axis.line == T, ecorys_colours$dark_grey, alpha("white", 0))),
                  panel.background = ggplot2::element_blank(),
                  plot.title.position = "plot",
-                 #strip.background = ggplot2::element_rect(fill = "white"),  # alternative background for facets
+                 legend.key=element_blank(),
+                 strip.background = ggplot2::element_rect(fill = ifelse(strip.background == F, "white", ecorys_colours$grey)),
+                 strip.text = ggplot2::element_text(family = font_bold, size = 12, color = "#222222")
   )
 }
 
