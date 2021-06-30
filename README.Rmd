@@ -94,13 +94,15 @@ iris %>%
 
 ```
 
+This plot uses `ecorys_mono_pal()` inside of `scale_fill_manual()` to generate a monochrome blue palette of the same length as the `diamonds$clarity` variable.
+
 ```{r}
 data(diamonds)
 
 diamonds %>% 
   ggplot() + 
   geom_bar(mapping = aes(x = cut, fill = clarity), position = "dodge") +
-  scale_fill_manual(values = ecorys_mono_pal(length(unique(diamonds$clarity))),
+  scale_fill_manual(values = ecorys_mono_pal(n_distinct(diamonds$clarity)),
                     name = "Clarity") +
   labs(title = "Plot using monochrome blue Ecorys palette") +
   ylab("Count") +
