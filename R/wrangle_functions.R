@@ -1,4 +1,4 @@
-#' fct_case_when()
+#' An extension of \code{\link{dplyr::case_when}} which outputs right hand side values as ordered factors
 #'
 #' \code{\link{fct_case_when}} extends \code{\link{dplyr::case_when}}. It outputs right hand side values as factors, where the order of resulting factor levels reflects the order in which arguments to the function are specified.
 #' This function was developed by StackOverflow  user Dennis YL (see \href{https://stackoverflow.com/questions/49572416/r-convert-to-factor-with-order-of-levels-same-with-case-when}{here}).

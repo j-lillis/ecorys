@@ -2,7 +2,7 @@
 % Please edit documentation in R/wrangle_functions.R
 \name{fct_case_when}
 \alias{fct_case_when}
-\title{fct_case_when()}
+\title{An extension of \code{\link{dplyr::case_when}} which outputs right hand side values as ordered factors}
 \usage{
 fct_case_when(...)
 }
