@@ -1,7 +1,7 @@
 Package: ecorys
 Type: Package
 Title: Ecorys
-Version: 0.1.0
+Version: 0.2.0
 Authors@R: person("Johnny", "Lillis", email = "johnny.lillis@ecorys.com",
   role = c("aut", "cre"))
 Description: Some handy tools for using R at Ecorys.
