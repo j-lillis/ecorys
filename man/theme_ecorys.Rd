@@ -12,9 +12,13 @@ theme_ecorys(
 )
 }
 \arguments{
-\item{x_grid}{Set to TRUE to display major grid lines for x axis (defaults to FALSE).}
+\item{grid.major.x}{Set to TRUE to display major grid lines for x axis (defaults to FALSE).}
 
-\item{y_grid}{Set to TRUE to display major grid lines for y axis (defaults to FALSE).}
+\item{grid.major.y}{Set to TRUE to display major grid lines for y axis (defaults to FALSE).}
+
+\item{axis.line}{Set to TRUE to display lines for x and y axis (defaults to FALSE),}
+
+\item{strip.background}{Set to FALSE to hide facet label backgrounds (defaults to TRUE).}
 }
 \value{
 None

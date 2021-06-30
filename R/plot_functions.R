@@ -55,8 +55,10 @@ ecorys_mono_pal <- colorRampPalette(colors = c("#84C2E3",ecorys_colours$light_bl
 #'
 #' Use \code{\link{theme_ecorys}} to format ggplot2 plots in the Ecorys style.
 #'
-#' @param x_grid Set to TRUE to display major grid lines for x axis (defaults to FALSE).
-#' @param y_grid Set to TRUE to display major grid lines for y axis (defaults to FALSE).
+#' @param grid.major.x Set to TRUE to display major grid lines for x axis (defaults to FALSE).
+#' @param grid.major.y Set to TRUE to display major grid lines for y axis (defaults to FALSE).
+#' @param axis.line Set to TRUE to display lines for x and y axis (defaults to FALSE),
+#' @param strip.background Set to FALSE to hide facet label backgrounds (defaults to TRUE).
 #'
 #' @return None
 #'
