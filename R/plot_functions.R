@@ -39,6 +39,18 @@ ecorys_palettes <- list(
   blue_2 = c("#006EB8", "#3FA7DF", "#0F9EA0","#273582", "#2D285F", "#A24090")
 )
 
+#' Function to return monochrome blue palette of length \emph{n}
+#'
+#' Use \code{\link{ecorys_mono_pal()}} to create a monochrome blue palette, where you can specify the number of shades.
+#'
+#' @return None
+#'
+#' @examples
+#' ecorys_mono_pal(4)
+#'
+#' @export
+ecorys_mono_pal <- colorRampPalette(colors = c("#84C2E3",ecorys_colours$light_blue, ecorys_colours$blue, ecorys_colours$dark_blue, "#0E1C69"))
+
 #' Theme to format ggplot2 charts in Ecorys style
 #'
 #' Use \code{\link{theme_ecorys}} to format ggplot2 plots in the Ecorys style.

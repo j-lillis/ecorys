@@ -2,6 +2,7 @@
 
 export("%>%")
 export(ecorys_colours)
+export(ecorys_mono_pal)
 export(ecorys_palettes)
 export(fct_case_when)
 export(theme_ecorys)
