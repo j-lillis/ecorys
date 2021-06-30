@@ -53,10 +53,9 @@ cleaning data. Currently it contains the following function:
 
 ## Examples
 
-Using `theme_ecorys()` and accessing colours from `ecorys_colours`.
-
-Note the arguments specified to `theme_ecorys()` to display y-axis grid
-lines and main axis lines.
+The following plot uses `theme_ecorys()` and accesses colours from
+`ecorys_colours`. Note the arguments specified to `theme_ecorys()` to
+display y-axis grid lines and main axis lines.
 
 ``` r
 data(mtcars)
