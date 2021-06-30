@@ -49,6 +49,10 @@ Currently `ecorys` provides the following tools which are designed to make it ea
 
 ## Examples
 
+Using `theme_ecorys()` and accessing colours from `ecorys_colours`.
+
+Note the arguments specified to `theme_ecorys()` to display y-axis grid lines and main axis lines.
+
 ```{r}
 mtcars %>% 
   ggplot(aes(x = mpg, y = disp, colour = factor(cyl))) +
@@ -60,8 +64,25 @@ mtcars %>%
   labs(title = "Plot using Ecorys theme") +
   ylab("Miles/(US) gallon") +
   xlab("Displacement (cu.in.)") +
-  theme_ecorys(y_grid = TRUE)
-
+  theme_ecorys(grid.major.y = TRUE,
+               axis.line = TRUE)
 ```
 
-## 
+As above, but using `facet_wrap()`. Note that within `theme_ecorys()`, `strip.background` can be set to `FALSE` to remove the grey boxes surrounding facet titles.
+
+```{r}
+mtcars %>%
+  ggplot(aes(x = mpg, y = disp, colour = factor(cyl))) +
+  geom_point(size = 4, alpha = 0.8) +
+  scale_colour_manual(values = c(ecorys_colours$blue, 
+                                 ecorys_colours$purple, 
+                                 ecorys_colours$green),
+                      name = "Cylinders:") +
+  labs(title = "Plot using Ecorys theme and facets") +
+  ylab("Miles/(US) gallon") +
+  xlab("Displacement (cu.in.)") +
+  facet_wrap(~cyl) +
+  theme_ecorys(grid.major.y = TRUE) +
+  theme(legend.position = "none")
+
+```
