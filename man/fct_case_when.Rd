@@ -14,7 +14,8 @@ None
 This function was developed by StackOverflow  user Dennis YL (see \href{https://stackoverflow.com/questions/49572416/r-convert-to-factor-with-order-of-levels-same-with-case-when}{here}).
 }
 \examples{
-data \%>\% mutate(value = fct_case_when(value == 1 ~ "group_1",
+data \%>\%
+mutate(value = fct_case_when(value == 1 ~ "group_1",
 value == 2 ~ "group_2"))
 
 }

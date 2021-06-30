@@ -4,12 +4,17 @@
 \alias{theme_ecorys}
 \title{Theme to format ggplot2 charts in Ecorys style}
 \usage{
-theme_ecorys(x_grid = FALSE, y_grid = FALSE)
+theme_ecorys(
+  grid.major.x = FALSE,
+  grid.major.y = FALSE,
+  axis.line = FALSE,
+  strip.background = TRUE
+)
 }
 \arguments{
-\item{x_grid}{Includes major grid lines for x axis}
+\item{x_grid}{Set to TRUE to display major grid lines for x axis (defaults to FALSE).}
 
-\item{y_grid}{Includes major grid lines for y axis}
+\item{y_grid}{Set to TRUE to display major grid lines for y axis (defaults to FALSE).}
 }
 \value{
 None
@@ -18,14 +23,11 @@ None
 Use \code{\link{theme_ecorys}} to format ggplot2 plots in the Ecorys style.
 }
 \examples{
-\dontrun{
-tibble(x = seq(1,10,1), y = seq(1,10,1)) \%>\%
-ggplot2::ggplot(aes(x = x, y = y)) +
+example_data <- tibble(x = seq(1,10,1), y = seq(1,10,1))
+
+ggplot(example_data = data, aes(x = x, y = y)) +
 geom_line() +
-ggtitle("Plot in Ecorys theme") +
-xlab("X axis") +
-ylab("Y axis") +
 theme_ecorys()
-}
+
 
 }
