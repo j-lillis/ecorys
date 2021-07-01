@@ -10,9 +10,6 @@ An object of class \code{list} of length 4.
 \usage{
 ecorys_palettes
 }
-\value{
-None
-}
 \description{
 Use \code{\link{ecorys_palettes}} to access palettes of Ecorys brand colours.
 }

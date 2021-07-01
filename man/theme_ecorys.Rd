@@ -20,16 +20,13 @@ theme_ecorys(
 
 \item{strip.background}{Set to FALSE to hide facet label backgrounds (defaults to TRUE).}
 }
-\value{
-None
-}
 \description{
 Use \code{\link{theme_ecorys}} to format ggplot2 plots in the Ecorys style.
 }
 \examples{
 example_data <- tibble(x = seq(1,10,1), y = seq(1,10,1))
 
-ggplot(example_data = data, aes(x = x, y = y)) +
+ggplot(data = example_data, aes(x = x, y = y)) +
 geom_line() +
 theme_ecorys()
 

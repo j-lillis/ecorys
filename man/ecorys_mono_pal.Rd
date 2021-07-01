@@ -6,9 +6,6 @@
 \usage{
 ecorys_mono_pal(n)
 }
-\value{
-None
-}
 \description{
 Use \code{\link{ecorys_mono_pal()}} to create a monochrome blue palette, where you can specify the number of shades.
 }

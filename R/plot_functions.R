@@ -2,8 +2,6 @@
 #'
 #' Use \code{\link{ecorys_colours}} to access Ecorys brand colours.
 #'
-#' @return None
-#'
 #' @examples
 #' ecorys_colours$blue
 #'
@@ -26,8 +24,6 @@ ecorys_colours <- list(
 #'
 #' Use \code{\link{ecorys_palettes}} to access palettes of Ecorys brand colours.
 #'
-#' @return None
-#'
 #' @examples
 #' ecorys_palettes$primary
 #'
@@ -42,8 +38,6 @@ ecorys_palettes <- list(
 #' Function to return monochrome blue palette of length \emph{n}
 #'
 #' Use \code{\link{ecorys_mono_pal()}} to create a monochrome blue palette, where you can specify the number of shades.
-#'
-#' @return None
 #'
 #' @examples
 #' ecorys_mono_pal(4)
@@ -60,12 +54,10 @@ ecorys_mono_pal <- colorRampPalette(colors = c("#84C2E3",ecorys_colours$light_bl
 #' @param axis.line Set to TRUE to display lines for x and y axis (defaults to FALSE),
 #' @param strip.background Set to FALSE to hide facet label backgrounds (defaults to TRUE).
 #'
-#' @return None
-#'
 #' @examples
 #' example_data <- tibble(x = seq(1,10,1), y = seq(1,10,1))
 #'
-#' ggplot(example_data = data, aes(x = x, y = y)) +
+#' ggplot(data = example_data, aes(x = x, y = y)) +
 #' geom_line() +
 #' theme_ecorys()
 #'
